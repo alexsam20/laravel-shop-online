@@ -17,4 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/xxx/helper.txt
+/xxx/helper-01.txt
+/xxx/helper-02.txt
+/xxx/*.txt
