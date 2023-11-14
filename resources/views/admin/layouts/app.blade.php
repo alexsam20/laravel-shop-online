@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('admin-assets/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin-assets/css/adminlte.min.css') }}">
+    <!-- DropZone style -->
     <link rel="stylesheet" href="{{ asset('admin-assets/plugins/dropzone/min/dropzone.css') }}">
 
     <link rel="stylesheet" href="{{ asset('admin-assets/css/custom.css') }}">
