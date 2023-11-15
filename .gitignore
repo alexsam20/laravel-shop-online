@@ -20,3 +20,5 @@ yarn-error.log
 /xxx/*.txt
 /public/uploads/*.*
 /public/temp/*.*
+/public/uploads/category/*.*
+/public/uploads/category/thumb/*.*
