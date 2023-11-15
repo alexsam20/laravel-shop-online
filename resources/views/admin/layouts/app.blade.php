@@ -74,7 +74,7 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2022 AmazingShop All rights reserved.</strong>
+            <strong>Copyright &copy; 2013-@php echo date('Y'); @endphp AmazingShop All rights reserved.</strong>
         </footer>
     </div>
     <!-- ./wrapper -->
