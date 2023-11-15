@@ -102,6 +102,10 @@
                             .removeClass('invalid-feedback').html("");
 
                     } else {
+                        if (response['notFound'] == true) {
+                            window.location.href="{{ route('categories.index') }}";
+                        }
+
                         var errors = response['errors'];
 
                         if (errors['name']) {

@@ -98,6 +98,7 @@ class CategoryController extends Controller
     {
         $category = Category::find($categoryId);
         if (empty($category)) {
+            $request->session()->flash('error', 'Category not found');
             return response()->json([
                 'status' => false,
                 'notFound' => true,
@@ -161,5 +162,28 @@ class CategoryController extends Controller
             ]);
         }
     }
-    public function destroy(){}
+    public function destroy(Request $request, int $categoryId)
+    {
+        $category = Category::find($categoryId);
+
+        if (empty($category)) {
+            $request->session()->flash('success', 'Category not found.');
+            return response()->json([
+                'status' => true,
+                'message' => 'Category not found.',
+            ]);
+        }
+
+        File::delete(public_path() . '/uploads/category/thumb/' . $category->image);
+        File::delete(public_path() . '/uploads/category/' . $category->image);
+
+        $category->delete();
+
+        $request->session()->flash('success', 'Category deleted successfully.');
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Category deleted successfully.',
+        ]);
+    }
 }
